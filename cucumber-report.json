@@ -1,0 +1,1029 @@
+[
+  {
+    "description": "  As a group of travelers\n  I want to track and split expenses fairly during our Denver trip\n  So that we can settle debts accurately at the end",
+    "elements": [
+      {
+        "description": "",
+        "id": "denver-trip-expense-splitting;complete-denver-trip-expense-tracking-workflow",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Complete Denver trip expense tracking workflow",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the app is running at \"http://localhost:8081\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:305"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the API is available at \"http://localhost:4000\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:309"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "displayName",
+                      "email",
+                      "password"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Alice",
+                      "alice.denver@test.com",
+                      "TestPass123!"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Bob",
+                      "bob.denver@test.com",
+                      "TestPass123!"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Charlie",
+                      "charlie.denver@test.com",
+                      "TestPass123!"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Diana",
+                      "diana.denver@test.com",
+                      "TestPass123!"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Eve",
+                      "eve.denver@test.com",
+                      "TestPass123!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I sign up the following users one by one:",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:334"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "\"Alice\" logs in with email \"alice.denver@test.com\" and password \"TestPass123!\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:445"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "\"Alice\" creates a new group named \"Denver Trip 2026\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:528"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "\"Alice\" views the group invite code",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:575"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "the invite code should be displayed",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:605"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "\"Bob\" logs in with email \"bob.denver@test.com\" and password \"TestPass123!\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:445"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "\"Bob\" joins the group using the invite code",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:628"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "\"Bob\" should be in the Denver Trip group",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:675"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "\"Charlie\" logs in with email \"charlie.denver@test.com\" and password \"TestPass123!\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:445"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "\"Charlie\" joins the group using the invite code",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:628"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "\"Charlie\" should be in the Denver Trip group",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:675"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "\"Diana\" logs in with email \"diana.denver@test.com\" and password \"TestPass123!\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:445"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "\"Diana\" joins the group using the invite code",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:628"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "\"Diana\" should be in the Denver Trip group",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:675"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 39,
+            "name": "\"Eve\" logs in with email \"eve.denver@test.com\" and password \"TestPass123!\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:445"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "\"Eve\" joins the group using the invite code",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:628"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "\"Eve\" should be in the Denver Trip group",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:675"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 44,
+            "name": "\"Alice\" logs in with email \"alice.denver@test.com\" and password \"TestPass123!\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:445"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "description",
+                      "amount",
+                      "date"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Day 1 - Hotel",
+                      "300",
+                      "2026-10-15"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Day 1 - Breakfast",
+                      "45",
+                      "2026-10-15"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 45,
+            "name": "\"Alice\" adds an expense to \"Denver Trip 2026\" group:",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:713"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 50,
+            "name": "\"Bob\" logs in with email \"bob.denver@test.com\" and password \"TestPass123!\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:445"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "description",
+                      "amount",
+                      "date"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Day 2 - Car Rental",
+                      "450",
+                      "2026-10-16"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Day 2 - Lunch",
+                      "60",
+                      "2026-10-16"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 51,
+            "name": "\"Bob\" adds an expense to \"Denver Trip 2026\" group:",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:713"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 56,
+            "name": "\"Charlie\" logs in with email \"charlie.denver@test.com\" and password \"TestPass123!\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:445"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "description",
+                      "amount",
+                      "date"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Day 3 - Dinner",
+                      "150",
+                      "2026-10-17"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Day 3 - Parking",
+                      "25",
+                      "2026-10-17"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Day 4 - Attractions",
+                      "200",
+                      "2026-10-18"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Day 4 - Dinner",
+                      "120",
+                      "2026-10-18"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Day 5 - Checkout",
+                      "100",
+                      "2026-10-19"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 57,
+            "name": "\"Charlie\" adds an expense to \"Denver Trip 2026\" group:",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:713"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 66,
+            "name": "\"Alice\" logs in with email \"alice.denver@test.com\" and password \"TestPass123!\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:445"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "paidBy",
+                      "paidTo",
+                      "amount"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Bob",
+                      "Alice",
+                      "200"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 67,
+            "name": "\"Alice\" records a payment in \"Denver Trip 2026\" group:",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:791"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 71,
+            "name": "\"Bob\" logs in with email \"bob.denver@test.com\" and password \"TestPass123!\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:445"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "paidBy",
+                      "paidTo",
+                      "amount"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Charlie",
+                      "Bob",
+                      "150"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 72,
+            "name": "\"Bob\" records a payment in \"Denver Trip 2026\" group:",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:791"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 76,
+            "name": "\"Charlie\" logs in with email \"charlie.denver@test.com\" and password \"TestPass123!\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:445"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "paidBy",
+                      "paidTo",
+                      "amount"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Diana",
+                      "Charlie",
+                      "100"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 77,
+            "name": "\"Charlie\" records a payment in \"Denver Trip 2026\" group:",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:791"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 81,
+            "name": "\"Diana\" logs in with email \"diana.denver@test.com\" and password \"TestPass123!\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:445"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "paidBy",
+                      "paidTo",
+                      "amount"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Eve",
+                      "Diana",
+                      "50"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 82,
+            "name": "\"Diana\" records a payment in \"Denver Trip 2026\" group:",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:791"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 86,
+            "name": "\"Eve\" logs in with email \"eve.denver@test.com\" and password \"TestPass123!\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:445"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "paidBy",
+                      "paidTo",
+                      "amount"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Alice",
+                      "Eve",
+                      "75"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 87,
+            "name": "\"Eve\" records a payment in \"Denver Trip 2026\" group:",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:791"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 92,
+            "name": "\"Alice\" logs in with email \"alice.denver@test.com\" and password \"TestPass123!\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:445"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 93,
+            "name": "\"Alice\" should see the group \"Denver Trip 2026\" with all expenses listed",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:889"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 94,
+            "name": "\"Alice\" should see the group balances tab",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:942"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 95,
+            "name": "the expenses tab should show at least 9 total expenses",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:975"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 96,
+            "name": "the payments tab should show at least 5 recorded payments",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:1011"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 99,
+            "name": "cleanup all test data for the trip",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:1164"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "denver-trip-expense-splitting;single-user-group-creation-and-expense-tracking",
+        "keyword": "Scenario",
+        "line": 101,
+        "name": "Single user group creation and expense tracking",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "the app is running at \"http://localhost:8081\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:305"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the API is available at \"http://localhost:4000\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:309"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "displayName",
+                      "email",
+                      "password"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Frank",
+                      "frank.denver@test.com",
+                      "TestPass456!"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 102,
+            "name": "I sign up the following users one by one:",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:334"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 106,
+            "name": "\"Frank\" logs in with email \"frank.denver@test.com\" and password \"TestPass456!\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:445"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "And ",
+            "line": 107,
+            "name": "\"Frank\" creates a new group named \"Solo Trip\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:528"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 108,
+            "name": "\"Frank\" should see the group \"Solo Trip\" in the groups list",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:1047"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "description",
+                      "amount",
+                      "date"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Hotel",
+                      "250",
+                      "2026-10-15"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Meals",
+                      "100",
+                      "2026-10-15"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 110,
+            "name": "\"Frank\" adds an expense to \"Solo Trip\" group:",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:713"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 115,
+            "name": "\"Solo Trip\" group should have 2 expenses with total amount 350",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:1081"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "When ",
+            "line": 117,
+            "name": "\"Frank\" logs in with email \"frank.denver@test.com\" and password \"TestPass456!\"",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:445"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 118,
+            "name": "\"Frank\" should see the group \"Solo Trip\" with expenses listed",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:1114"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 120,
+            "name": "cleanup all test data for the trip",
+            "match": {
+              "location": "tests/e2e/step-definitions/denver-trip.steps.ts:1164"
+            }
+          },
+          {
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "denver-trip-expense-splitting",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Denver Trip Expense Splitting",
+    "tags": [],
+    "uri": "tests/e2e/features/denver-trip.feature"
+  }
+]

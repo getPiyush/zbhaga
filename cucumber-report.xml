@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<testsuite name="Cucumber" time="0.019" tests="2" skipped="2" failures="0" errors="0" timestamp="2026-10-14T00:40:41.952Z">
+  <testcase classname="Denver Trip Expense Splitting" name="Complete Denver trip expense tracking workflow" time="0.001">
+    <skipped/>
+    <system-out><![CDATA[Given the app is running at "http://localhost:8081".........................skipped
+And the API is available at "http://localhost:4000".........................skipped
+Given I sign up the following users one by one:.............................skipped
+When "Alice" logs in with email "alice.denver@test.com" and password "TestPass123!"..skipped
+And "Alice" creates a new group named "Denver Trip 2026"....................skipped
+And "Alice" views the group invite code.....................................skipped
+Then the invite code should be displayed....................................skipped
+When "Bob" logs in with email "bob.denver@test.com" and password "TestPass123!"..skipped
+And "Bob" joins the group using the invite code.............................skipped
+Then "Bob" should be in the Denver Trip group...............................skipped
+When "Charlie" logs in with email "charlie.denver@test.com" and password "TestPass123!"..skipped
+And "Charlie" joins the group using the invite code.........................skipped
+Then "Charlie" should be in the Denver Trip group...........................skipped
+When "Diana" logs in with email "diana.denver@test.com" and password "TestPass123!"..skipped
+And "Diana" joins the group using the invite code...........................skipped
+Then "Diana" should be in the Denver Trip group.............................skipped
+When "Eve" logs in with email "eve.denver@test.com" and password "TestPass123!"..skipped
+And "Eve" joins the group using the invite code.............................skipped
+Then "Eve" should be in the Denver Trip group...............................skipped
+When "Alice" logs in with email "alice.denver@test.com" and password "TestPass123!"..skipped
+And "Alice" adds an expense to "Denver Trip 2026" group:....................skipped
+When "Bob" logs in with email "bob.denver@test.com" and password "TestPass123!"..skipped
+And "Bob" adds an expense to "Denver Trip 2026" group:......................skipped
+When "Charlie" logs in with email "charlie.denver@test.com" and password "TestPass123!"..skipped
+And "Charlie" adds an expense to "Denver Trip 2026" group:..................skipped
+When "Alice" logs in with email "alice.denver@test.com" and password "TestPass123!"..skipped
+And "Alice" records a payment in "Denver Trip 2026" group:..................skipped
+When "Bob" logs in with email "bob.denver@test.com" and password "TestPass123!"..skipped
+And "Bob" records a payment in "Denver Trip 2026" group:....................skipped
+When "Charlie" logs in with email "charlie.denver@test.com" and password "TestPass123!"..skipped
+And "Charlie" records a payment in "Denver Trip 2026" group:................skipped
+When "Diana" logs in with email "diana.denver@test.com" and password "TestPass123!"..skipped
+And "Diana" records a payment in "Denver Trip 2026" group:..................skipped
+When "Eve" logs in with email "eve.denver@test.com" and password "TestPass123!"..skipped
+And "Eve" records a payment in "Denver Trip 2026" group:....................skipped
+When "Alice" logs in with email "alice.denver@test.com" and password "TestPass123!"..skipped
+Then "Alice" should see the group "Denver Trip 2026" with all expenses listed..skipped
+And "Alice" should see the group balances tab...............................skipped
+And the expenses tab should show at least 9 total expenses..................skipped
+And the payments tab should show at least 5 recorded payments...............skipped
+Then cleanup all test data for the trip.....................................skipped]]></system-out>
+  </testcase>
+  <testcase classname="Denver Trip Expense Splitting" name="Single user group creation and expense tracking" time="0">
+    <skipped/>
+    <system-out><![CDATA[Given the app is running at "http://localhost:8081".........................skipped
+And the API is available at "http://localhost:4000".........................skipped
+Given I sign up the following users one by one:.............................skipped
+When "Frank" logs in with email "frank.denver@test.com" and password "TestPass456!"..skipped
+And "Frank" creates a new group named "Solo Trip"...........................skipped
+Then "Frank" should see the group "Solo Trip" in the groups list............skipped
+When "Frank" adds an expense to "Solo Trip" group:..........................skipped
+Then "Solo Trip" group should have 2 expenses with total amount 350.........skipped
+When "Frank" logs in with email "frank.denver@test.com" and password "TestPass456!"..skipped
+Then "Frank" should see the group "Solo Trip" with expenses listed..........skipped
+Then cleanup all test data for the trip.....................................skipped]]></system-out>
+  </testcase>
+</testsuite>

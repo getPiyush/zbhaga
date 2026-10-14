@@ -1,0 +1,50 @@
+{
+  "name": "zbhaga",
+  "version": "0.1.0",
+  "private": true,
+  "description": "zBhaga - shared group expenses, split fairly.",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "install-all": "node scripts/install.js",
+    "build:shared": "npm run build -w @zbhaga/shared",
+    "dev:api": "npm run dev -w @zbhaga/api",
+    "dev:web": "npm run web -w @zbhaga/client",
+    "dev:native": "npm run start -w @zbhaga/client",
+    "db:push": "npm run db:push -w @zbhaga/api",
+    "db:seed": "npm run db:seed -w @zbhaga/api",
+    "setup": "npm run db:push && npm run db:seed",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
+    "start": "npm run dev",
+    "test": "npm run test -w @zbhaga/shared && npm run test -w @zbhaga/api",
+    "test:playwright": "playwright test",
+    "test:playwright:ui": "playwright test --ui",
+    "test:playwright:debug": "playwright test --debug",
+    "test:playwright:headed": "playwright test --headed",
+    "test:playwright:report": "playwright show-report",
+    "test:cucumber": "npm run cleanup:before-test && cucumber-js tests/e2e/features --require-module ts-node/register --format progress-bar --format html:cucumber-report.html --format json:cucumber-report.json && npm run cleanup:after-test",
+    "test:cucumber:feature": "npm run cleanup:before-test && cucumber-js tests/e2e/features/denver-trip.feature --require-module ts-node/register --format progress-bar --format html:cucumber-report.html && npm run cleanup:after-test",
+    "cleanup:before-test": "node scripts/cleanup-test-artifacts.js --verbose || echo 'Cleanup skipped (API unavailable)'",
+    "test:cucumber:archive": "npm run test:cucumber:feature -- && npm run cleanup:archive",
+    "test:all": "npm run test:playwright -- tests/denver-trip-scenario.spec.ts && npm run test:cucumber && npm run cleanup:after-test",
+    "cleanup": "node scripts/cleanup-test-artifacts.js",
+    "cleanup:after-test": "node scripts/cleanup-test-artifacts.js --verbose",
+    "cleanup:archive": "node scripts/cleanup-test-artifacts.js --archive --verbose",
+    "cleanup:full": "node scripts/cleanup-test-artifacts.js --full-cleanup --verbose",
+    "cleanup:dry-run": "node scripts/cleanup-test-artifacts.js --dry-run --verbose",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.3.0",
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^24.19.2",
+    "concurrently": "^10.0.6",
+    "ts-node": "^10.9.2",
+    "typescript": "~6.0.3"
+  }
+}
